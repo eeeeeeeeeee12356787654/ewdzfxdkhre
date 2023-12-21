@@ -27,9 +27,9 @@ function unlockEmcResearch(){
 }
 
 function unlockDysonResearch(){
-	if(getResource(RESOURCE.Energy) >= 100000 && getResource(RESOURCE.Plasma) >= 10000){
-		Game.resources.takeResource(RESOURCE.Energy, 100000);
-		Game.resources.takeResource(RESOURCE.Plasma, 10000);
+	if(getResource(RESOURCE.Energy) >= 10 && getResource(RESOURCE.Plasma) >= 10){
+		Game.resources.takeResource(RESOURCE.Energy, 10);
+		Game.resources.takeResource(RESOURCE.Plasma, 10);
 		document.getElementById("researchDyson").className = "hidden";
 		document.getElementById("unlockDyson").className = "";
 		Game.tech.unlockTech("unlockDyson");
@@ -183,20 +183,14 @@ function gainAutoEmc(){
 	}
 }
 
-var dyson = 0; var dysonTitaniumCost = 300000; var dysonGoldCost = 100000; var dysonSiliconCost = 200000; var dysonMeteoriteCost = 1000; var dysonIceCost = 100000;
+var dyson = 0; var dysonTitaniumCost = 1; var dysonGoldCost = 1; var dysonSiliconCost = 1; var dysonMeteoriteCost = 1; var dysonIceCost = 1;
 
-const ringTitaniumCost = 25373795; const ringGoldCost = 8457916; const ringSiliconCost = 16915856; const ringMeteoriteCost = 84555; const ringIceCost = 8457916; const ringSegmentCost = 50; const ringRocketFuelCost = 50000;
+const ringTitaniumCost = 1; const ringGoldCost = 1; const ringSiliconCost = 1; const ringMeteoriteCost = 1; const ringIceCost = 1; const ringSegmentCost = 1; const ringRocketFuelCost = 1;
 
-const swarmTitaniumCost = 93669640; const swarmGoldCost = 31223182; const swarmSiliconCost = 62446413; const swarmMeteoriteCost = 312182; const swarmIceCost = 31223182; const swarmSegmentCost = 100; const swarmRocketFuelCost = 250000;
+const swarmTitaniumCost = 1; const swarmGoldCost = 1; const swarmSiliconCost = 1; const swarmMeteoriteCost = 1; const swarmIceCost = 1; const swarmSegmentCost = 1; const swarmRocketFuelCost = 1;
 
-const sphereTitaniumCost = 2104015696; const sphereGoldCost = 701338478; const sphereSiliconCost = 1402677088; const sphereMeteoriteCost = 7013258; const sphereIceCost = 701338478; const sphereSegmentCost = 250; const sphereRocketFuelCost = 1000000;
+const sphereTitaniumCost = 1; const sphereGoldCost = 1; const sphereSiliconCost = 1; const sphereMeteoriteCost = 1; const sphereIceCost = 1; const sphereSegmentCost = 1; const sphereRocketFuelCost = 1;
 
-function updateDysonCost(){
-	dysonTitaniumCost = Math.floor(300000 * Math.pow(1.02,dyson));
-	dysonGoldCost = Math.floor(100000 * Math.pow(1.02,dyson));
-	dysonSiliconCost = Math.floor(200000 * Math.pow(1.02,dyson));
-	dysonMeteoriteCost = Math.floor(1000 * Math.pow(1.02,dyson));
-	dysonIceCost = Math.floor(100000 * Math.pow(1.02,dyson));
 }
 
 function getDyson(){
